@@ -7,12 +7,10 @@
 
 <script>
 
-    import Navbar from './components/shared/navbar'
 
     export default {
         name: 'app',
         components: {
-            Navbar
         }
     }
 </script>
