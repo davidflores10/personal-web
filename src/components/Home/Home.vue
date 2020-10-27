@@ -61,6 +61,9 @@
             <a href="https://github.com/davidflores10">
               <i class="fab fa-github"></i>
             </a>
+            <a href="https://stackoverflow.com/users/10363238/david">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -258,15 +261,7 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/*!
-* Start Bootstrap - Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
-* Copyright 2013-2019 Start Bootstrap
-* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
-*/
-
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
@@ -414,6 +409,20 @@ p.lead {
     display: block;
     cursor: pointer;
   }
+
+  #sideNav .navbar-collapse .navbar-nav .nav-item:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-animation:'';
+    -moz-animation:none;
+    -ms-animation:'';
+    -o-animation:'';
+    animation:'';
+  }
+
 
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
