@@ -1,7 +1,7 @@
 <template>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#">
+    <a class="navbar-brand js-scroll-trigger" href="#" >
       <span class="d-block d-lg-none">David Flores</span>
       <span class="d-none d-lg-block">
 <!--        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://avatars2.githubusercontent.com/u/28624293?s=400&u=4813ed204ff84342a5407f5172854d3e6022c141&v=4" alt="">-->
