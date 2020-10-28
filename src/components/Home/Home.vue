@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <div class="container-fluid p-0">
+  <div class="container-fluid p-0" >
 
     <transition name="bounce">
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about" v-if="bounce.about">
@@ -382,6 +382,20 @@ p.lead {
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
 
+  #sideNav .navbar-brand .img-profile:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-animation:'';
+    -moz-animation:none;
+    -ms-animation:'';
+    -o-animation:'';
+    animation:'';
+    transition: 0.5s;
+  }
+
   #sideNav .navbar-collapse {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -421,6 +435,7 @@ p.lead {
     -ms-animation:'';
     -o-animation:'';
     animation:'';
+    transition: 0.5s;
   }
 
 
