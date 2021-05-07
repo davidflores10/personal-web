@@ -8,10 +8,10 @@
         <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../../assets/profile.jpg" alt="">
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -279,6 +279,13 @@ export default {
       }
     }
   },
+
+  mounted(){
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+    this.onResize()
+  },
   methods: {
     changeListActive(prop) {
       this.bounce.about = false;
@@ -287,8 +294,33 @@ export default {
       this.bounce.skills = false;
       this.bounce.interest = false;
       this.bounce.awards = false;
-      this.bounce.projects = true
+      this.bounce.projects = false;
       this.bounce[prop] = true;
+    },
+    onResize(){
+      if (window.innerWidth<992){
+        this.showAllSections();
+      }else{
+        this.hideAllSections();
+      }
+    },
+    showAllSections(){
+      this.bounce.about = true;
+      this.bounce.experience = true;
+      this.bounce.education = true;
+      this.bounce.skills = true;
+      this.bounce.interest = true;
+      this.bounce.awards = true;
+      this.bounce.projects = true;
+    },
+    hideAllSections(){
+      this.bounce.about = true;
+      this.bounce.experience = false;
+      this.bounce.education = false;
+      this.bounce.skills = false;
+      this.bounce.interest = false;
+      this.bounce.awards = false;
+      this.bounce.projects = false;
     }
   }
 }
