@@ -1,7 +1,7 @@
 <template>
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#" >
+    <a class="navbar-brand js-scroll-trigger" href="#">
       <span class="d-block d-lg-none">David Flores</span>
       <span class="d-none d-lg-block">
 <!--        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://avatars2.githubusercontent.com/u/28624293?s=400&u=4813ed204ff84342a5407f5172854d3e6022c141&v=4" alt="">-->
@@ -32,11 +32,14 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" @click="changeListActive('awards')">Awards</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" @click="changeListActive('projects')">Projects</a>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <div class="container-fluid p-0" >
+  <div class="container-fluid p-0">
 
     <transition name="bounce">
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about" v-if="bounce.about">
@@ -234,6 +237,26 @@
       </section>
     </transition>
 
+    <transition name="bounce">
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects" v-if="bounce.projects">
+        <div class="w-100">
+          <h2 class="mb-5">Projects</h2>
+          <div class="row">
+            <div class="col-4">
+              <a href="https://davidflores-landing.netlify.app/">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  src="../../assets/landing-page.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5  class="card-title">Landing Page</h5>
+                </div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </transition>
+
   </div>
   </body>
 
@@ -245,7 +268,15 @@ export default {
   // props: {},
   data() {
     return {
-      bounce: {about: true, experience: false, education: false, skills: false, interest: false, awards: false}
+      bounce: {
+        about: true,
+        experience: false,
+        education: false,
+        skills: false,
+        interest: false,
+        awards: false,
+        projects: false
+      }
     }
   },
   methods: {
@@ -256,6 +287,7 @@ export default {
       this.bounce.skills = false;
       this.bounce.interest = false;
       this.bounce.awards = false;
+      this.bounce.projects = true
       this.bounce[prop] = true;
     }
   }
@@ -388,11 +420,11 @@ p.lead {
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
-    -webkit-animation:'';
-    -moz-animation:none;
-    -ms-animation:'';
-    -o-animation:'';
-    animation:'';
+    -webkit-animation: '';
+    -moz-animation: none;
+    -ms-animation: '';
+    -o-animation: '';
+    animation: '';
     transition: 0.5s;
   }
 
@@ -430,11 +462,11 @@ p.lead {
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
-    -webkit-animation:'';
-    -moz-animation:none;
-    -ms-animation:'';
-    -o-animation:'';
-    animation:'';
+    -webkit-animation: '';
+    -moz-animation: none;
+    -ms-animation: '';
+    -o-animation: '';
+    animation: '';
     transition: 0.5s;
   }
 
