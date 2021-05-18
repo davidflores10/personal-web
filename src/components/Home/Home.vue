@@ -244,12 +244,22 @@
           <div class="row">
             <div class="col-4">
               <a href="https://davidflores-landing.netlify.app/">
-              <div class="card" style="width: 18rem;">
-                <img class="card-img-top"  src="../../assets/landing-page.png" alt="Card image cap">
+              <div class="card card-projects" >
+                <img class="card-img-top card-image"  src="../../assets/landing-page.png" alt="Card image cap">
                 <div class="card-body">
                   <h5  class="card-title">Landing Page</h5>
                 </div>
               </div>
+              </a>
+            </div>
+            <div class="col-4">
+              <a href="https://spotifyclone-davidflores.netlify.app/">
+                <div class="card card-projects" >
+                  <img class="card-img-top card-image"  src="../../assets/spotify-clone.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5  class="card-title">Spotify Clone</h5>
+                  </div>
+                </div>
               </a>
             </div>
           </div>
@@ -566,6 +576,14 @@ a:hover, a:focus, a:active {
   100% {
     opacity: 1;
   }
+}
+
+.card-projects{
+  height: 206px;
+}
+
+.card-image{
+  min-height: 131px;
 }
 
 </style>
