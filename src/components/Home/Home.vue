@@ -347,6 +347,22 @@ body {
     padding-top: 0;
     padding-left: 17rem;
   }
+  .card-title{
+    font-size: 1.25rem !important;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 992px){
+  .card-title{
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px){
+  .card-title{
+    font-size: 0.8rem !important;
+  }
 }
 
 h1,
@@ -584,6 +600,10 @@ a:hover, a:focus, a:active {
 
 .card-image{
   min-height: 131px;
+}
+
+.card-title{
+  font-size: 0.60rem ;
 }
 
 </style>
